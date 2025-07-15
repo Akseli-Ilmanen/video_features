@@ -11,7 +11,7 @@ on_extraction: 'save_numpy'  # what to do once the features are extracted. Can b
 output_path: './output' # where to store results if saved
 tmp_path: './tmp' # folder to store the temporary files used for extraction (frames or aud files)
 keep_tmp_files: false # to keep temp files after feature extraction.
-show_pred: true # to show preds of a model, i.e. on a pre-train dataset for each feature (Kinetics 400)
+show_pred: false # to show preds of a model, i.e. on a pre-train dataset for each feature (Kinetics 400)
 
 # config
 config: null
