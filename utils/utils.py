@@ -184,10 +184,10 @@ def which_ffmpeg() -> str:
     # Determine the platform on which the program is running
     if platform.system().lower() == 'windows':
         result = subprocess.run(['where', 'ffmpeg'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        ffmpeg_path = result.stdout.decode('utf-8').replace('\r\n', '')
+        ffmpeg_path = result.stdout.decode('utf-8').splitlines()[0]
     else:
         result = subprocess.run(['which', 'ffmpeg'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        ffmpeg_path = result.stdout.decode('utf-8').replace('\n', '')
+        ffmpeg_path = result.stdout.decode('utf-8').splitlines()[0]
     return ffmpeg_path
 
 

@@ -1,0 +1,20 @@
+name: video_features
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.9
+  - pytorch
+  - torchvision
+  - torchaudio
+  - omegaconf
+  - scipy
+  - tqdm
+  - pytest
+  - opencv
+  - pip
+  - pip:
+    - ipykernel
+    - matplotlib
+    - scikit-learn
