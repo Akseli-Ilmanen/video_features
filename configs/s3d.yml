@@ -1,6 +1,8 @@
 # Model
 feature_type: 's3d'
-stack_size: 50 # Feature time span in fps
+# NOTE: I tested both stack_size 20 and 50, and 20 had slightly better performance on diffact (200 epochs), and takes less time to compute here.
+stack_size: 20 # Feature time span in fps - 
+
 step_size: 1 # Feature step size in fps
 extraction_fps: 200 # 25 is my best guess. For original video fps, leave unspecified "null" (None)
 startPreDispOut: 200 # Number of frames before disp out to include 
